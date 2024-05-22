@@ -13,6 +13,15 @@ const CodeEditor = ({language}:any) => {
             defaultValue=" "
             theme="vs-white"
             language={language}
+            options={{ 
+                fontSize: 9.13,  
+                fontFamily: 'Cascadia Mono',
+                lineHeight: 10.61,
+                wordWrap: 'off',
+                minimap: { enabled: false },
+                scrollBeyondLastLine: false,
+                automaticLayout: true, 
+            }}
         />
         </div>
     );

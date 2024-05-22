@@ -9,8 +9,6 @@ import businessicon from '../../public/icons/business.png';
 import codeicon from '../../public/icons/code.png';
 import foldericon from '../../public/icons/folder.png';
 
-
-
 const Acc: React.FC = () => {
   const [selectedKeys, setSelectedKeys] = React.useState<Selection>(new Set(["1"]));
   const defaultContent =
@@ -22,7 +20,13 @@ const Acc: React.FC = () => {
       onSelectionChange={setSelectedKeys}
       className="text-[#2B2B2B] font-['Space Grotesk']"
     >
-      <AccordionItem startContent={<Image src={vectoricon} alt="icon" width={26.3} height={22} className="mr-[20px]"  />} key="1" aria-label="Accordion 1" title="Documentation"  className="font-[700] text-start text-[20px] pt-[20px] accordionBorder">
+      <AccordionItem 
+        startContent={<Image src={vectoricon} alt="icon" width={26.3} height={22} className="mr-[20px]"  />} 
+        key="1" 
+        aria-label="Accordion 1" 
+        title="Documentation" 
+        className="font-[700] text-start text-[20px] pt-[20px] accordionBorder"
+      >
         <p className="text-[16px] text-[#646464] px-6 font-[300]">
           
           {defaultContent}

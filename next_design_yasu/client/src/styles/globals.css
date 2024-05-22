@@ -142,6 +142,33 @@ main {
   background: #FFFFFF77;
 }
 
+/*  */
+/* styles/globals.css */
+
+/* .sidebar {
+  width: 200px;
+  background-color: #2e2e2e;
+  padding: 20px;
+}
+
+.sidebar-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #4a4a4a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar-button:hover {
+  background-color: #6a6a6a;
+} */
+
+/*  */
+
 .codeeditorSize {
   height: -webkit-fill-available;
 }
@@ -251,14 +278,16 @@ main {
     width: 100%;
 }
 
-.accordionBorder {
-  border-bottom: 2px solid white;
-  padding-bottom: 20px;
+.buildbtnhover:hover {
+  background-color: rgb(14 165 233);
+  color: white;
 }
 
-.accordionBorder::after {
-  border-bottom: 2px solid #3154E0;
-}
+/* .accordionBorder {
+  border-bottom: 2px solid white;
+  padding-bottom: 20px;
+} */
+
 
 /* .codeEditorfont {
   font-family: 'Cascadia Mono';

@@ -27,7 +27,7 @@ const Home: NextPage = () => {
       <div className="quadrant-bg bg-[#FFFFFF] w-full gap-4">
         <article className='col-start-2 col-span-2 text-pretty'>
           <h1 className='text-center font-[700] text-[40px] leading-[3.19rem] text-[#000000] pt-[57px]'>an</h1>
-          <p className='font-[inter] text-[16px] text-center leading-[1.21rem] font-[300] text-[#646464]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the <br />industry's standard dummy text ever since the 1500s</p>
+          <p className='font-[inter] text-[16px] text-center leading-[1.21rem] font-[300] text-[#646464] pt-[20px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the <br />industry's standard dummy text ever since the 1500s</p>
         </article>
 
         <div className="mx-auto flex justify-center min-h-screen w-full main_tool">
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className='...'>
-            <div className="flex flex-1">
+            <div className="flex flex-1 my-[19.67px]">
                 <div className="flex items-center justify-center ml-[61.79px] w-[540px]">
                   {/* <Accordion 
                     items={accordionItems} 

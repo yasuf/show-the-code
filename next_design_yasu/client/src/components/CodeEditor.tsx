@@ -4,14 +4,15 @@ import dynamic from 'next/dynamic';
 
 const MonacoEditor = dynamic(import('@monaco-editor/react'), { ssr: false });
 
-const CodeEditor = () => {
+const CodeEditor = ({language}:any) => {
     return (
         <div style={{height: "100%"}}>
         <MonacoEditor
             height="100%"
-            defaultLanguage="javascript"
+            defaultLanguage="Javascript"
             defaultValue=" "
             theme="vs-white"
+            language={language}
         />
         </div>
     );

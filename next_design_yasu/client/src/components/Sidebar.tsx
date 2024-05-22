@@ -25,7 +25,7 @@ const menuItems: MenuItemProps[] = [
   { name: 'Rails', href: '/rails', icon: '/icons/rails.svg' },
 ];
 
-const Sidebar: React.FC = () => {
+const Sidebar = ({language, setLanguage}:any) => {
   const router = useRouter();
 
   return (
@@ -35,12 +35,10 @@ const Sidebar: React.FC = () => {
         <ul>
           {menuItems.map((item) => (
             <li key={item.href}>
-              <Link legacyBehavior href={item.href}>
-                <a className={`flex items-center p-2 rounded-[2.85px] sidebarText h-[1.463rem] ${router.pathname === item.href ? 'bg-blue-500' : 'text-gray-700 hover:bg-[#3154E0] border-indigo-500'}`}>
+                <div onClick={() => setLanguage(item.name)} className={`flex items-center p-2 rounded-[2.85px] sidebarText h-[1.463rem] ${language.pathname === item.name ? 'bg-blue-500' : 'text-gray-700 hover:bg-[#3154E0] border-indigo-500'}`}>
                   <img src={item.icon} alt={item.name} className="h-[11.41px] w-[11.41px] mr-3" />
                   {item.name}
-                </a>
-              </Link>
+                </div>
             </li>
           ))}
         </ul>

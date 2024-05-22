@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Sidebar from './Sidebar';
 import CodeEditor from './CodeEditor';
@@ -9,13 +9,17 @@ import icon3 from '../../public/icons/Icon3.png';
 
 const tabs: string[] = ['Front-end', 'Back-end', 'Analytics'];
 
-const CodeEditorWin: React.FC = ({icon}) => {
+const CodeEditorWin: React.FC = ({icon}:any) => {
     const [code, setCode] = useState(' ');
     const [activeTab, setActiveTab] = useState<string>(tabs[0]);
+    const [language, setLanguage] = useState<string>('javascript');
 
     const handleTabClick = (tab: string): void => {
         setActiveTab(tab);
     };
+    useEffect(() => {
+        console.log(language);
+    }, [language]);
 
     return (
         <div className="border-2 border-inherit rounded-[5.71px] flex flex-col h-full">
@@ -25,21 +29,21 @@ const CodeEditorWin: React.FC = ({icon}) => {
                         className={`px-4 py-2 w-[6.953rem] h-[1.569rem] ${activeTab === "Front-end" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
                         onClick={() => handleTabClick("Front-end")}
                     >   
-                        <Image src={icon1} alt={icon} width={13.69} height={13.69} className="mr-[14.26px] mb-[-8.5px]"  />
+                        <Image src={icon1} alt={icon} width={13.69} height={13.69} className="mr-[14.26px] mb-[-9px]"  />
                         Front-end
                     </button>
                     <button
                         className={`px-4 py-2 w-[6.953rem] h-[1.569rem] ${activeTab === "Back-end" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
                         onClick={() => handleTabClick("Back-end")}
                     >   
-                        <Image src={icon2} alt={icon} width={13.69} height={13.69} className="mr-[14.26px]  mb-[-8.5px]"  />
+                        <Image src={icon2} alt={icon} width={13.69} height={13.69} className="mr-[14.26px]  mb-[-9px]"  />
                         Back-end
                     </button>
                     <button
                         className={`px-4 py-2 w-[6.953rem] h-[1.569rem] ${activeTab === "Analytics" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
                         onClick={() => handleTabClick("Analytics")}
                     >   
-                        <Image src={icon3} alt={icon} width={13.69} height={13.69} className="mr-[14.26px]  mb-[-8.5px]"  />
+                        <Image src={icon3} alt={icon} width={13.69} height={13.69} className="mr-[14.26px]  mb-[-9px]"  />
                         Analytics
                     </button>
                     
@@ -50,11 +54,11 @@ const CodeEditorWin: React.FC = ({icon}) => {
                 {activeTab === 'Back-end' && 
                     <div className="h-[486px] flex">
                         <div className="sidebarPosition w-1/4">
-                            <Sidebar />
+                            <Sidebar language={language} setLanguage= {setLanguage}/>
                         </div>
                       
                         <div className="bg-slate-100 w-3/4 rounded-[5.71px] shadow-md shadow-lg mt-[8.9px] ml-[11.48px] ...">
-                            <CodeEditor value={code} onChange={setCode} />
+                            <CodeEditor key={language} language={language} value={code} onChange={setCode} />
                             <pre>{code}</pre>
                         </div>
                     </div>

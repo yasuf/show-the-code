@@ -3,8 +3,10 @@ import Image from 'next/image';
 // import { Button } from '@nextui-org/react';
 import Sidebar_backend from './Sidebar_backend';
 import Sidebar_frontend from './Sidebar_frontend';
+import Sidebar_analytics from './Sidebar_analytics';
 import CodeEditor_backend from './CodeEditor_backend';
 import CodeEditor_frontend from './CodeEditor_frontend';
+import CodeEditor_analytics from './CodeEditor_analytics';
 
 import icon1 from '../../public/icons/Icon1.png';
 import icon2 from '../../public/icons/Icon2.png';
@@ -83,7 +85,20 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                 }
 
                     
-                {activeTab === 'Analytics' && <p className='text-[#000000]'>Analytics code examples...</p>}
+                {activeTab === 'Analytics' && 
+                    <div className="h-full flex">
+                        <div className="sidebarPosition w-1/4">
+                            <Sidebar_analytics language={language} setFile={setFile} setLanguage= {setLanguage}/>
+                        </div>
+                    
+                        <div className="bg-slate-100 w-3/4 rounded-[5.71px] shadow-md shadow-lg mt-[8.9px] ml-[11.48px] ...">
+                            <CodeEditor_analytics key={language} file={file} language={language} value={code} onChange={setCode} />
+                            <button className='buildbtnhover float-right text-[#000000] text-[9.13px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 m-5 border-solid border-2 border-sky-500'>
+                                Build with React →
+                            </button>
+                        </div>
+                    </div>
+                }
             </div>
         </div>
     );

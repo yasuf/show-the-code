@@ -25,7 +25,7 @@ const menuItems: MenuItemProps[] = [
   { name: 'Rails', filename: 'rails.rb', ext: 'rb', icon: '/icons/rails.svg' },
 ];
 
-const Sidebar = ({language, setLanguage, setFile}:any) => {
+const Sidebar_backend = ({language, setLanguage, setFile}:any) => {
   const router = useRouter();
 
   return (
@@ -47,4 +47,4 @@ const Sidebar = ({language, setLanguage, setFile}:any) => {
   );
 };
 
-export default Sidebar;
+export default Sidebar_backend;

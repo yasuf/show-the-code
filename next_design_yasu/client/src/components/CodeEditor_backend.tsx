@@ -4,32 +4,16 @@ import dynamic from 'next/dynamic';
 
 const MonacoEditor = dynamic(import('@monaco-editor/react'), { ssr: false });
 
-const CodeEditor = ({file, language}:any) => {
+const CodeEditor_backend = ({file, language}:any) => {
     const [code, setCode] = useState('');
 
     useEffect(() => {
         const fetchCode = async () => {
-            const response = await fetch(`/code/${file}`);
+            const response = await fetch(`/code/code_backend/${file}`);
             const codeText = await response.text();
             setCode(codeText);
         };
         fetchCode();}, [language]);
-
-    const languageMap = {
-        javascript: 'javascript',
-        python: 'python',
-        ruby: 'ruby',
-        java: 'java',
-        php: 'php',
-        go: 'go',
-        kotlin: 'kotlin',
-        cs: 'csharp',
-        scala: 'scala',
-        swift: 'swift',
-        laravel: 'php',
-        symfony: 'php',
-        rails: 'ruby',
-    };
 
     return (
         <div className='h-[85%]'>
@@ -55,4 +39,4 @@ const CodeEditor = ({file, language}:any) => {
     );
 };
 
-export default CodeEditor;
+export default CodeEditor_backend;

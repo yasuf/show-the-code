@@ -1,5 +1,5 @@
-// This is a simple JavaScript example
-console.log('Hello, JavaScript!');
+// This is a simple JavaScript Backend example
+console.log('Hello, Backend! JavaScript!');
 
 // Function example
 function greet(name) {

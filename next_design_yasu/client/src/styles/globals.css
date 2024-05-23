@@ -109,6 +109,7 @@ body {
 
 .sidebarText:hover {
   color: #FFFFFF;
+  background-color: #3154E0;
 }
 
 .sidebarTitle {
@@ -261,7 +262,7 @@ main {
 
  .accordion-title span  {	
     transform: rotate(0deg);
-    -ms-writing-mode: lr-tb;
+    /* -ms-writing-mode: lr-tb; */
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
     padding-left: 33px;
     padding-right: 33px;

@@ -18,7 +18,7 @@ const menuItems: MenuItemProps[] = [
     { name: 'iOS', filename: 'ios.swift', ext: 'swift',  icon: '/icons/ios.svg' },
 ];
 
-const Sidebar_frontend = ({language, setLanguage, setFile}:any) => {
+const Sidebar_frontend = ({language, setLanguage, file, setFile}:any) => {
   const router = useRouter();
 
   return (
@@ -28,7 +28,7 @@ const Sidebar_frontend = ({language, setLanguage, setFile}:any) => {
         <ul>
           {menuItems.map((item) => (
             <li key={item.name}>
-                <div key={item.name} onClick={() => {setLanguage(item.name); setFile(item.filename)}} className={`flex items-center p-2 rounded-[2.85px] sidebarText h-[1.463rem] ${language.pathname === item.name ? 'bg-blue-500' : 'text-gray-700 hover:bg-[#3154E0] border-indigo-500'}`}>
+                <div key={item.name} onClick={() => {setLanguage(item.name); setFile(item.filename)}} className={`flex items-center p-2 rounded-[2.85px] sidebarText h-[1.463rem] ${file==item.filename? 'bg-[#3154E0] text-[#FFFFFF]' : ''} ${language.pathname === item.name ? 'bg-blue-500' : 'text-gray-700 border-indigo-500'}`}>
                   <img src={item.icon} alt={item.name} className="h-[11.41px] w-[11.41px] mr-3" />
                   {item.name}
                 </div>

@@ -6,26 +6,27 @@ interface MenuItemProps {
   name: string;
   ext: string;
   filename: string;
+  language: string;
   icon: string;
 }
 
 const menuItems: MenuItemProps[] = [
-  { name: 'Kotlin', filename: 'kotlin.kt', ext: 'kt', icon: '/icons/kotlin.svg' },
-  { name: 'C#', filename: 'csharp.cs', ext: 'cs', icon: '/icons/csharp.svg' },
-  { name: 'Scala', filename: 'scala.scala', ext: 'scala', icon: '/icons/scala.svg' },
-  { name: 'Ruby', filename: 'ruby.rb', ext: 'rb', icon: '/icons/ruby.svg' },
-  { name: 'Python', filename: 'python.py', ext: 'py',  icon: '/icons/python.svg' },
-  { name: 'Go', filename: 'go.go', ext: 'go', icon: '/icons/go.svg' },
-  { name: 'Java', filename: 'java.java', ext: 'java', icon: '/icons/java.svg' },
-  { name: 'Javascript', filename: 'javascript.js', ext: 'js', icon: '/icons/javascript.svg' },
-  { name: 'Swift', filename: 'swift.swift', ext: 'swift', icon: '/icons/swift.svg' },
-  { name: 'PHP', filename: 'php.php', ext: 'php', icon: '/icons/php.svg' },
-  { name: 'Laravel', filename: 'laravel.php', ext: 'php', icon: '/icons/laravel.svg' },
-  { name: 'Symfony', filename: 'symfony.php', ext: 'php', icon: '/icons/symfony.svg' },
-  { name: 'Rails', filename: 'rails.rb', ext: 'rb', icon: '/icons/rails.svg' },
+  { name: 'Kotlin', language: "kotlin", filename: 'kotlin.kt', ext: 'kt', icon: '/icons/kotlin.svg' },
+  { name: 'C#', language: "csharp", filename: 'csharp.cs', ext: 'cs', icon: '/icons/csharp.svg' },
+  { name: 'Scala', language: "scala", filename: 'scala.scala', ext: 'scala', icon: '/icons/scala.svg' },
+  { name: 'Ruby', language: "ruby", filename: 'ruby.rb', ext: 'rb', icon: '/icons/ruby.svg' },
+  { name: 'Python', language: "python", filename: 'python.py', ext: 'py',  icon: '/icons/python.svg' },
+  { name: 'Go', language: "go", filename: 'go.go', ext: 'go', icon: '/icons/go.svg' },
+  { name: 'Java', language: "java", filename: 'java.java', ext: 'java', icon: '/icons/java.svg' },
+  { name: 'Javascript', language: "javascript", filename: 'javascript.js', ext: 'js', icon: '/icons/javascript.svg' },
+  { name: 'Swift', language: "swift", filename: 'swift.swift', ext: 'swift', icon: '/icons/swift.svg' },
+  { name: 'PHP', language: "php", filename: 'php.php', ext: 'php', icon: '/icons/php.svg' },
+  { name: 'Laravel', language: "php", filename: 'laravel.php', ext: 'php', icon: '/icons/laravel.svg' },
+  { name: 'Symfony', language: "twig", filename: 'symfony.twig', ext: 'twig', icon: '/icons/symfony.svg' },
+  { name: 'Rails', language: "ruby", filename: 'rails.rb', ext: 'rb', icon: '/icons/rails.svg' },
 ];
 
-const Sidebar_backend = ({language, setLanguage, setFile}:any) => {
+const Sidebar_backend = ({language, setLanguage, file, setFile}:any) => {
   const router = useRouter();
 
   return (
@@ -35,7 +36,7 @@ const Sidebar_backend = ({language, setLanguage, setFile}:any) => {
         <ul>
           {menuItems.map((item) => (
             <li key={item.name}>
-                <div key={item.name} onClick={() => {setLanguage(item.name); setFile(item.filename)}} className={`flex items-center p-2 rounded-[2.85px] sidebarText h-[1.463rem] ${language.pathname === item.name ? 'bg-blue-500' : 'text-gray-700 hover:bg-[#3154E0] border-indigo-500'}`}>
+                <div key={item.name} onClick={() => {setLanguage(item.language); setFile(item.filename)}} className={`flex items-center p-2 rounded-[2.85px] sidebarText h-[1.463rem] ${file==item.filename? 'bg-[#3154E0] text-[#FFFFFF]' : ''} ${language.pathname === item.name ? 'bg-blue-500' : 'text-gray-700 border-indigo-500'}`}>
                   <img src={item.icon} alt={item.name} className="h-[11.41px] w-[11.41px] mr-3" />
                   {item.name}
                 </div>

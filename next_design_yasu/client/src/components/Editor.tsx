@@ -58,7 +58,7 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                 {activeTab === 'Front-end' &&
                     <div className="h-full flex">
                         <div className="sidebarPosition w-1/4">
-                            <Sidebar_frontend language={language} setFile={setFile} setLanguage= {setLanguage}/>
+                            <Sidebar_frontend language={language} file={file} setFile={setFile} setLanguage= {setLanguage}/>
                         </div>
                     
                         <div className="bg-slate-100 w-3/4 rounded-[5.71px] shadow-md shadow-lg mt-[8.9px] ml-[11.48px] ...">
@@ -72,7 +72,7 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                 {activeTab === 'Back-end' && 
                     <div className="h-full flex">
                         <div className="sidebarPosition w-1/4">
-                            <Sidebar_backend language={language} setFile={setFile} setLanguage= {setLanguage}/>
+                            <Sidebar_backend language={language} file={file} setFile={setFile} setLanguage= {setLanguage}/>
                         </div>
                       
                         <div className="bg-slate-100 w-3/4 rounded-[5.71px] shadow-md shadow-lg mt-[8.9px] ml-[11.48px] ...">
@@ -88,7 +88,7 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                 {activeTab === 'Analytics' && 
                     <div className="h-full flex">
                         <div className="sidebarPosition w-1/4">
-                            <Sidebar_analytics language={language} setFile={setFile} setLanguage= {setLanguage}/>
+                            <Sidebar_analytics language={language} file={file} setFile={setFile} setLanguage= {setLanguage}/>
                         </div>
                     
                         <div className="bg-slate-100 w-3/4 rounded-[5.71px] shadow-md shadow-lg mt-[8.9px] ml-[11.48px] ...">

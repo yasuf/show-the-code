@@ -1,6 +1,5 @@
 // components/CodeEditor.tsx
 import React, { useState, useEffect } from 'react';
-// import Prism from 'prismjs';
 import dynamic from 'next/dynamic';
 
 // const Prism = require('prismjs');
@@ -17,17 +16,26 @@ const CodeEditor_backend = ({file, language}:any) => {
 
     useEffect(() => {
         const fetchCode = async () => {
+        try {
             const response = await fetch(`/code/code_backend/${file}`);
+            if(!response.ok) {
+                throw new Error('Failed to fetch code');
+            }
             const codeText = await response.text();
             setCode(codeText);
+            } catch(error) {
+                console.error('Error Fetching code:', error);
+            }
         };
         fetchCode();}, [language]);
     
     useEffect(() => {
         console.log(language);
     }, [language])
+
     return (
         <div className='h-[85%]'>
+            <div style={{ position: 'absolute', top: 0, bottom: 0, left: 0, right: 0, pointerEvents: 'none' }}></div>
             <MonacoEditor
                 height="100%"
                 defaultLanguage={code}
@@ -43,6 +51,17 @@ const CodeEditor_backend = ({file, language}:any) => {
                     minimap: { enabled: false },
                     scrollBeyondLastLine: false,
                     automaticLayout: true, 
+                    readOnly: true,
+                    rulers: [],
+                    overviewRulerBorder: false,
+                    lineDecorationsWidth: 0,
+                    scrollbar: {
+                        useShadows: false,
+                        verticalScrollbarSize: 5,
+                        horizontalScrollbarSize: 5,
+                        vertical: 'auto',
+                        horizontal: 'auto',
+                    },
                 }}
                 onChange={(newValue) => setCode(newValue || "")}
             />

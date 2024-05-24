@@ -32,6 +32,14 @@ const CodeEditor_frontend = ({file, language}:any) => {
                     minimap: { enabled: false },
                     scrollBeyondLastLine: false,
                     automaticLayout: true, 
+                    readOnly: true,
+                    scrollbar: {
+                        useShadows: false,
+                        verticalScrollbarSize: 5,
+                        horizontalScrollbarSize: 5,
+                        vertical: 'auto',
+                        horizontal: 'auto',
+                    },
                 }}
                 onChange={(newValue) => setCode(newValue || "")}
             />

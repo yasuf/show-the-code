@@ -110,6 +110,7 @@ body {
 .sidebarText:hover {
   color: #FFFFFF;
   background-color: #3154E0;
+  cursor: pointer;
 }
 
 .sidebarTitle {

@@ -107,10 +107,18 @@ body {
   color: #000000;
 }
 
+
 .sidebarText:hover {
   color: #FFFFFF;
   background-color: #3154E0;
   cursor: pointer;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  transition: background-color 0.5s ease;
+  animation: fade-in 0.5s ease-in-out;
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .sidebarTitle {
@@ -142,6 +150,10 @@ main {
 
 .SidebarBG {
   background: #FFFFFF77;
+}
+
+.decorationsOverviewRuler{
+  display: none!important;
 }
 
 /*  */

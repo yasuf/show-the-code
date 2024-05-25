@@ -16,6 +16,7 @@ const CodeEditor_frontend = ({file, language}:any) => {
         fetchCode();}, [language]);
 
     return (
+        // <div className='h-[85%] border-b-[2px] border-[#000000]'>
         <div className='h-[85%]'>
             <MonacoEditor
                 height="100%"
@@ -28,6 +29,10 @@ const CodeEditor_frontend = ({file, language}:any) => {
                     fontSize: 9.13,  
                     fontFamily: 'Cascadia Mono',
                     lineHeight: 10.61,
+                    padding: {
+                        top: 28.76,
+                        bottom: 20,
+                    },
                     wordWrap: 'off',
                     minimap: { enabled: false },
                     scrollBeyondLastLine: false,
@@ -40,6 +45,7 @@ const CodeEditor_frontend = ({file, language}:any) => {
                         vertical: 'auto',
                         horizontal: 'auto',
                     },
+                    overviewRulerBorder: true,
                 }}
                 onChange={(newValue) => setCode(newValue || "")}
             />

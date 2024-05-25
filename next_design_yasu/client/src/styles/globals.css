@@ -107,7 +107,6 @@ body {
   color: #000000;
 }
 
-
 .sidebarText:hover {
   color: #FFFFFF;
   background-color: #3154E0;
@@ -149,7 +148,8 @@ main {
 }
 
 .SidebarBG {
-  background: #FFFFFF77;
+  background: #FFFFFF;
+  /* background: #FFFFFF77; */
 }
 
 .decorationsOverviewRuler{

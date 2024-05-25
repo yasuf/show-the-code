@@ -28,6 +28,10 @@ const CodeEditor_analytics = ({file, language}:any) => {
                     fontSize: 9.13,  
                     fontFamily: 'Cascadia Mono',
                     lineHeight: 10.61,
+                    padding: {
+                        top: 28.76,
+                        bottom: 20,
+                    },
                     wordWrap: 'off',
                     minimap: { enabled: false },
                     scrollBeyondLastLine: false,

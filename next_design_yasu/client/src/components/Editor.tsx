@@ -60,10 +60,10 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                         <div className="sidebarPosition w-1/4">
                             <Sidebar_frontend language={language} file={file} setFile={setFile} setLanguage= {setLanguage}/>
                         </div>
-                    
-                        <div className="bg-slate-100 w-3/4 rounded-[5.71px] shadow-md shadow-lg mt-[8.9px] ml-[11.48px] ...">
+
+                        <div className="bg-slate-100 w-3/4 rounded-[5.71px] mt-[8.9px] ml-[11.48px] mb-[10px] mt-[8.9px] border-[#f3f4f6] from-indigo-500 border-l-[9.7px] border-t-[9.7px] ...">
                             <CodeEditor_frontend key={language} file={file} language={language} value={code} onChange={setCode} />
-                            <button className='buildbtnhover float-right text-[#000000] text-[9.13px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 m-5 border-solid border-2 border-sky-500'>
+                            <button className='buildbtnhover float-right text-[#000000] text-[9.13px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 mt-[15px] mx-5 border-solid border-2 border-sky-500'>
                                 Build with React →
                             </button>
                         </div>
@@ -75,9 +75,9 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                             <Sidebar_backend language={language} file={file} setFile={setFile} setLanguage= {setLanguage}/>
                         </div>
                       
-                        <div className="bg-slate-100 w-3/4 rounded-[5.71px] shadow-md shadow-lg mt-[8.9px] ml-[11.48px] ...">
+                        <div className="bg-slate-100 w-3/4 rounded-[5.71px] mt-[8.9px] ml-[11.48px] mb-[10px] mt-[8.9px] border-[#f3f4f6] from-indigo-500 border-l-[9.7px] border-t-[9.7px] ...">
                             <CodeEditor_backend key={language} file={file} language={language} value={code} onChange={setCode} />
-                            <button className='buildbtnhover float-right text-[#000000] text-[9.13px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 m-5 border-solid border-2 border-sky-500'>
+                            <button className='buildbtnhover float-right text-[#000000] text-[9.13px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 mt-[15px] mx-5 border-solid border-2 border-sky-500'>
                                 Build with React →
                             </button>
                         </div>
@@ -91,9 +91,9 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                             <Sidebar_analytics language={language} file={file} setFile={setFile} setLanguage= {setLanguage}/>
                         </div>
                     
-                        <div className="bg-slate-100 w-3/4 rounded-[5.71px] shadow-md shadow-lg mt-[8.9px] ml-[11.48px] ...">
+                        <div className="bg-slate-100 w-3/4 rounded-[5.71px] mt-[8.9px] ml-[11.48px] mb-[10px] mt-[8.9px] border-[#f3f4f6] from-indigo-500 border-l-[9.7px] border-t-[9.7px] ...">
                             <CodeEditor_analytics key={language} file={file} language={language} value={code} onChange={setCode} />
-                            <button className='buildbtnhover float-right text-[#000000] text-[9.13px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 m-5 border-solid border-2 border-sky-500'>
+                            <button className='buildbtnhover float-right text-[#000000] text-[9.13px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 mt-[15px] mx-5 border-solid border-2 border-sky-500'>
                                 Build with React →
                             </button>
                         </div>

@@ -36,7 +36,7 @@ const Sidebar_backend = ({language, setLanguage, file, setFile}:any) => {
         <ul>
           {menuItems.map((item) => (
             <li key={item.name}>
-                <div key={item.name} onClick={() => {setLanguage(item.language); setFile(item.filename)}} className={`flex items-center p-2 rounded-[2.85px] sidebarText h-[1.463rem] text-gray-700 font-medium ${file==item.filename? 'bg-[#3154E0] text-white' : ''} ${language.pathname === item.name ? 'bg-[#3154E0] text-white' : ' border-indigo-500'}`}>
+                <div key={item.name} onClick={() => {setLanguage(item.language); setFile(item.filename)}} className={`flex items-center p-2 rounded-[2.85px] sidebarText h-[1.463rem] text-gray-700 font-medium ${file==item.filename? 'bg-[#3154E0] !text-white' : ''} ${language.pathname === item.name ? 'bg-[#3154E0] text-white' : ' border-indigo-500'}`}>
                   <img src={item.icon} alt={item.name} className="h-[11.41px] w-[11.41px] mr-3" />
                   {item.name}
                 </div>

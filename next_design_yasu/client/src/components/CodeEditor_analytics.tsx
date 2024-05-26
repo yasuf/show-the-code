@@ -16,7 +16,8 @@ const CodeEditor_analytics = ({file, language}:any) => {
         fetchCode();}, [language]);
 
     return (
-        <div className='h-[85%]'>
+        <div className='h-[85%] flex flex-row'>
+            <div className='bg-gradient-to-r from-[#eae8e8] to-[#ffffff] min-w-[9.7px]'></div>
             <MonacoEditor
                 height="100%"
                 defaultLanguage="Javascript"

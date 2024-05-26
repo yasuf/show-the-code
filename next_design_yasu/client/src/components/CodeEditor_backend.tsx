@@ -34,8 +34,8 @@ const CodeEditor_backend = ({file, language}:any) => {
     }, [language])
 
     return (
-        <div className='h-[85%]'>
-            <div style={{ position: 'absolute', top: 0, bottom: 0, left: 0, right: 0, pointerEvents: 'none' }}></div>
+        <div className='h-[85%] flex flex-row'>
+            <div className='bg-gradient-to-r from-[#eae8e8] to-[#ffffff] min-w-[9.7px]'></div>
             <MonacoEditor
                 height="100%"
                 defaultLanguage={code}

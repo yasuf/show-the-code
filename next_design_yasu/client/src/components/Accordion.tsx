@@ -23,7 +23,7 @@ const Acc: React.FC = () => {
     <Accordion
       selectedKeys={selectedKeys}
       onSelectionChange={setSelectedKeys}
-      className="text-[#2B2B2B] font-['Space Grotesk']"
+      className="text-[#2B2B2B] accordionFont"
     >
       <AccordionItem
         startContent={<Image src={vectoricon} alt="icon" width={26.3} height={22} className="mr-[20px]" />}

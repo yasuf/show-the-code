@@ -37,10 +37,10 @@ body {
   width: 100%;
   height: auto;
   background: 
-      radial-gradient(circle at top left, #0532A3, transparent 60%, #7E95D0, transparent 60%),
-      radial-gradient(circle at top right, #685daf, transparent 60%, #D8D8D8, transparent 0%),
-      radial-gradient(circle at bottom right, #0532A3, transparent 60%, #7E95D0, transparent 60%, #FFFFFF, transparent 0%),
-      radial-gradient(circle at bottom left, #2FB8D6, transparent 60%, #FFFFFF, transparent 60%, #FFFFFF, transparent 0%);
+      radial-gradient(circle at top left, #0532A3, transparent 55%, #7E95D0, transparent 50%),
+      radial-gradient(circle at top right, #685daf, transparent 55%, #D8D8D8, transparent 0%),
+      radial-gradient(circle at bottom right, #0532A3, transparent 55%, #7E95D0, transparent 50%, #FFFFFF, transparent 0%),
+      radial-gradient(circle at bottom left, #2FB8D6, transparent 55%, #FFFFFF, transparent 50%, #FFFFFF, transparent 0%);
   background-size: 50% 50%;
   background-repeat: no-repeat;
   background-position: top left, top right, bottom right, bottom left;
@@ -130,7 +130,7 @@ body {
   line-height: 11.65px;
 }
 
-.editorButton {
+.editorButton, .accordionFont, .articleFont {
   font-family: 'Space Grotesk';
 }
 
@@ -298,6 +298,11 @@ main {
 .buildbtnhover:hover {
   background-color: rgb(14 165 233);
   color: white;
+  font-family: 'Space Grotesk';;
+}
+
+.buildbtnhover, .Toptapfont {
+  font-family: 'Space Grotesk';;
 }
 
 /* .accordionBorder {

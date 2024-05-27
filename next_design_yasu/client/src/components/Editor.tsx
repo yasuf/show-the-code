@@ -26,10 +26,10 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
     };
 
     return (
-        <div className="border-2 border-inherit rounded-[5.71px] flex flex-col h-full">
+        <div className="border-2 border-inherit rounded-[8px] overflow-hidden flex flex-col h-full">
             <div className="flex bg-zinc-400 text-[#2B2B2B] overflow-hidden rounded-t-[5.71px] text-[6.85px] leading-[0.546rem] font-[700] font-['Space Grotesk']">
                 <button
-                    className={`px-4 py-2 w-[6.953rem] h-[1.569rem] ${activeTab === "Front-end" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
+                    className={`px-4 py-2 w-[6.953rem] h-[1.569rem] font-Grotesk ${activeTab === "Front-end" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
                     onClick={() => handleTabClick("Front-end")}
                 >   
                     <Image src={icon1} alt={icon} width={13.69} height={13.69} className="mr-[14.26px] mb-[-10.5px]"  />
@@ -37,7 +37,7 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                 </button>
                 
                 <button
-                    className={`px-4 py-2 w-[6.953rem] h-[1.569rem] ${activeTab === "Back-end" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
+                    className={`px-4 py-2 w-[6.953rem] h-[1.569rem] font-Grotesk ${activeTab === "Back-end" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
                     onClick={() => handleTabClick("Back-end")}
                 >   
                     <Image src={icon2} alt={icon} width={13.69} height={13.69} className="mr-[14.26px]  mb-[-10.5px]"  />
@@ -45,7 +45,7 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                 </button>
 
                 <button
-                    className={`px-4 py-2 w-[6.953rem] h-[1.569rem] ${activeTab === "Analytics" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
+                    className={`px-4 py-2 w-[6.953rem] h-[1.569rem] font-Grotesk ${activeTab === "Analytics" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
                     onClick={() => handleTabClick("Analytics")}
                 >   
                     <Image src={icon3} alt={icon} width={13.69} height={13.69} className="mr-[14.26px]  mb-[-10.5px]"  />

@@ -26,9 +26,9 @@ const CodeEditor_analytics = ({file, language}:any) => {
                 theme="vs-white"
                 language={language}
                 options={{
-                    fontSize: 14,
+                    fontSize: 12,
                     fontFamily: 'Cascadia Mono',
-                    lineHeight: 17,
+                    lineHeight: 15,
                     padding: {
                         top: 28.76,
                         bottom: 20,

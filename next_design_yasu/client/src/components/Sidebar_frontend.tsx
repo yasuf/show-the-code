@@ -24,7 +24,7 @@ const Sidebar_frontend = ({ language, setLanguage, file, setFile }: any) => {
   return (
     <div>
       <div className="p-0">
-        <h2 className="sidebarTitle text-xl font-semibold mb-4 text-[#000000]">Application :</h2>
+        {/* <h2 className="sidebarTitle text-xl font-semibold mb-4 text-[#000000]">Application :</h2> */}
         <ul>
           {menuItems.map((item) => (
             <li key={item.name}>

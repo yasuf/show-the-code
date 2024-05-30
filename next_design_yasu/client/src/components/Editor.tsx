@@ -12,7 +12,7 @@ import icon1 from '../../public/icons/Icon1.png';
 import icon2 from '../../public/icons/Icon2.png';
 import icon3 from '../../public/icons/Icon3.png';
 
-const tabs: string[] = ['Front-end', 'Back-end'];
+const tabs: string[] = ['Front-end', 'Backend'];
 
 const CodeEditorWin: React.FC = ({icon}:any) => {
     const [code, setCode] = useState(' ');
@@ -32,19 +32,19 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                     className={`px-4 py-3 w-[6.953rem] h-[2rem] font-Grotesk ${activeTab === "Front-end" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[13px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
                     onClick={() => handleTabClick("Front-end")}
                 >
-                    <Image src={icon1} alt={icon} width={13.69} height={13.69} className="mb-[-10.5px]"  />
-                    <div className="ml-[14px]">
+                    <Image src={icon1} alt={icon} width={15.69} height={13.69} className="mb-[-10.5px]"  />
+                    <div className="ml-[16px]">
                         Front-end
                     </div>
                 </button>
 
                 <button
-                    className={`px-4 py-3 w-[6.953rem] h-[1.569rem] font-Grotesk ${activeTab === "Back-end" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[13px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
-                    onClick={() => handleTabClick("Back-end")}
+                    className={`px-4 py-3 w-[6.953rem] h-[1.569rem] font-Grotesk ${activeTab === "Backend" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[13px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
+                    onClick={() => handleTabClick("Backend")}
                 >
-                    <Image src={icon2} alt={icon} width={13.69} height={13.69} className="mb-[-10.5px]"  />
-                    <div className="ml-[14px]">
-                        Back-end
+                    <Image src={icon2} alt={icon} width={15.69} height={13.69} className="mb-[-10.5px]"  />
+                    <div className="ml-[16px]">
+                        Backend
                     </div>
                 </button>
 
@@ -52,8 +52,8 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                     className={`px-4 py-3 w-[6.953rem] h-[1.569rem] font-Grotesk ${activeTab === "Analytics" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
                     onClick={() => handleTabClick("Analytics")}
                 >
-                    <Image src={icon3} alt={icon} width={13.69} height={13.69} className="mb-[-10.5px]"  />
-                    <div className="ml-[14px]">
+                    <Image src={icon3} alt={icon} width={15.69} height={13.69} className="mb-[-10.5px]"  />
+                    <div className="ml-[16px]">
                         Analytics
                     </div>
                 </button> */}
@@ -75,7 +75,7 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                         </div>
                     </div>
                 }
-                {activeTab === 'Back-end' &&
+                {activeTab === 'Backend' &&
                     <div className="h-full flex">
                         <div className="sidebarPosition w-1/4">
                             <Sidebar_backend language={language} file={file} setFile={setFile} setLanguage= {setLanguage}/>

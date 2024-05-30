@@ -297,13 +297,14 @@ main {
 }
 
 .buildbtnhover:hover {
-  background-color: rgb(14 165 233);
+  background-color: rgb(93, 93, 93);
   color: white;
-  font-family: 'Nunito Sans';;
+  font-weight: 700;
+  font-family: 'Nunito Sans';
 }
 
 .buildbtnhover, .Toptapfont {
-  font-family: 'Nunito Sans';;
+  font-family: 'Nunito Sans';
 }
 
 /* .accordionBorder {

@@ -1,3 +1,6 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "settings": {
+    "ignores": ["./public/code/code_frontend/angular.ts"]
+  }
 }

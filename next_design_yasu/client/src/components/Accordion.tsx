@@ -10,7 +10,7 @@ import codeicon from '../../public/icons/code.png';
 import foldericon from '../../public/icons/folder.png';
 
 const Acc: React.FC = () => {
-  const [selectedKeys, setSelectedKeys] = React.useState<Selection>(new Set(["1"]));
+  const [selectedKeys, setSelectedKeys] = React.useState(new Set(["1"]));
 
   useEffect(() => {
     console.log(selectedKeys);

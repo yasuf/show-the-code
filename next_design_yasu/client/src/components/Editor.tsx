@@ -12,7 +12,7 @@ import icon1 from '../../public/icons/Icon1.png';
 import icon2 from '../../public/icons/Icon2.png';
 import icon3 from '../../public/icons/Icon3.png';
 
-const tabs: string[] = ['Front-end', 'Backend'];
+const tabs: string[] = ['Frontend', 'Backend'];
 
 const CodeEditorWin: React.FC = ({icon}:any) => {
     const [code, setCode] = useState(' ');
@@ -29,17 +29,17 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
         <div className="border-2 border-inherit rounded-[8px] overflow-hidden flex flex-col h-full">
             <div className="flex bg-zinc-400 text-[#2B2B2B] overflow-hidden rounded-t-[5.71px] text-[13px] leading-[0.546rem] font-[700] font-['Nunito Sans']">
                 <button
-                    className={`px-4 py-3 w-[6.953rem] h-[2rem] font-Grotesk ${activeTab === "Front-end" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[13px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
-                    onClick={() => handleTabClick("Front-end")}
+                    className={`px-4 py-3 w-[6.953rem] h-[2rem] font-Grotesk ${activeTab === "Frontend" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[13px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
+                    onClick={() => handleTabClick("Frontend")}
                 >
                     <Image src={icon1} alt={icon} width={15.69} height={13.69} className="mb-[-10.5px]"  />
                     <div className="ml-[16px]">
-                        Front-end
+                        Frontend
                     </div>
                 </button>
 
                 <button
-                    className={`px-4 py-3 w-[6.953rem] h-[1.569rem] font-Grotesk ${activeTab === "Backend" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[13px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
+                    className={`px-4 py-3 w-[6.953rem] h-[2rem] font-Grotesk ${activeTab === "Backend" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[13px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
                     onClick={() => handleTabClick("Backend")}
                 >
                     <Image src={icon2} alt={icon} width={15.69} height={13.69} className="mb-[-10.5px]"  />
@@ -49,7 +49,7 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                 </button>
 
                 {/* <button
-                    className={`px-4 py-3 w-[6.953rem] h-[1.569rem] font-Grotesk ${activeTab === "Analytics" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
+                    className={`px-4 py-3 w-[6.953rem] h-[2rem] font-Grotesk ${activeTab === "Analytics" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
                     onClick={() => handleTabClick("Analytics")}
                 >
                     <Image src={icon3} alt={icon} width={15.69} height={13.69} className="mb-[-10.5px]"  />
@@ -61,7 +61,7 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
 
             <div className="w-[35.451rem] h-[95%] bg-red-400 SidebarBG">
                 {/* Dynamic content based on active tab */}
-                {activeTab === 'Front-end' &&
+                {activeTab === 'Frontend' &&
                     <div className="h-full flex">
                         <div className="sidebarPosition w-1/4">
                             <Sidebar_frontend language={language} file={file} setFile={setFile} setLanguage= {setLanguage}/>
@@ -69,8 +69,8 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
 
                         <div className="bg-slate-100 w-3/4 rounded-[5.71px] mt-[8.9px] ml-[11.48px] mb-[10px] mt-[8.9px] overflow-hidden ...">
                             <CodeEditor_frontend key={language} file={file} language={language} value={code} onChange={setCode} />
-                            <button className='buildbtnhover float-right text-[#000000] text-[9.13px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 mt-[15px] mx-5 border-solid border-2 border-sky-500'>
-                                Build with React →
+                            <button className='buildbtnhover float-right text-[#000000] text-[12px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 mt-[15px] mx-5 border-solid border-2 border-gray-500'>
+                                Quickstart →
                             </button>
                         </div>
                     </div>
@@ -83,8 +83,8 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
 
                         <div className="bg-slate-100 w-3/4 rounded-[5.71px] mt-[8.9px] ml-[11.48px] mb-[10px] mt-[8.9px] overflow-hidden ...">
                             <CodeEditor_backend key={language} file={file} language={language} value={code} onChange={setCode} />
-                            <button className='buildbtnhover float-right text-[#000000] text-[9.13px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 mt-[15px] mx-5 border-solid border-2 border-sky-500'>
-                                Build with React →
+                            <button className='buildbtnhover float-right text-[#000000] text-[12px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 mt-[15px] mx-5 border-solid border-2 border-gray-500'>
+                                Quickstart →
                             </button>
                         </div>
                     </div>
@@ -99,8 +99,8 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
 
                         <div className="bg-slate-100 w-3/4 rounded-[5.71px] mt-[8.9px] ml-[11.48px] mb-[10px] mt-[8.9px] overflow-hidden ...">
                             <CodeEditor_analytics key={language} file={file} language={language} value={code} onChange={setCode} />
-                            <button className='buildbtnhover float-right text-[#000000] text-[9.13px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 mt-[15px] mx-5 border-solid border-2 border-sky-500'>
-                                Build with React →
+                            <button className='buildbtnhover float-right text-[#000000] text-[12px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 mt-[15px] mx-5 border-solid border-2 border-sky-500'>
+                                Quickstart →
                             </button>
                         </div>
                     </div>

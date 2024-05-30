@@ -25,10 +25,10 @@ const CodeEditor_analytics = ({file, language}:any) => {
                 value={code}
                 theme="vs-white"
                 language={language}
-                options={{ 
-                    fontSize: 9.13,  
+                options={{
+                    fontSize: 14,
                     fontFamily: 'Cascadia Mono',
-                    lineHeight: 10.61,
+                    lineHeight: 17,
                     padding: {
                         top: 28.76,
                         bottom: 20,
@@ -36,7 +36,7 @@ const CodeEditor_analytics = ({file, language}:any) => {
                     wordWrap: 'off',
                     minimap: { enabled: false },
                     scrollBeyondLastLine: false,
-                    automaticLayout: true, 
+                    automaticLayout: true,
                     readOnly: true,
                     scrollbar: {
                         useShadows: false,

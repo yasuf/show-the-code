@@ -28,7 +28,7 @@ const CodeEditor_backend = ({file, language}:any) => {
             }
         };
         fetchCode();}, [language]);
-    
+
     useEffect(() => {
         console.log(language);
     }, [language])
@@ -43,10 +43,10 @@ const CodeEditor_backend = ({file, language}:any) => {
                 value={code}
                 theme="vs-white"
                 language={language}
-                options={{ 
-                    fontSize: 9.13,  
+                options={{
+                    fontSize: 14,
                     fontFamily: 'Cascadia Mono',
-                    lineHeight: 10.61,
+                    lineHeight: 17,
                     padding: {
                         top: 28.76,
                         bottom: 20,
@@ -54,7 +54,7 @@ const CodeEditor_backend = ({file, language}:any) => {
                     wordWrap: 'off',
                     minimap: { enabled: false },
                     scrollBeyondLastLine: false,
-                    automaticLayout: true, 
+                    automaticLayout: true,
                     readOnly: true,
                     rulers: [],
                     overviewRulerBorder: false,

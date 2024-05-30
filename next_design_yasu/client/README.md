@@ -62,22 +62,6 @@ The deliverable is a repository with a React project containing all the tools fo
 
 Rendered from generated JS/CSS.
 
-## How to develop a widget in a Next.js project
-
-1. **Create a Next.js Project**: Set up a new Next.js project using `create-next-app` or by initializing a new project manually.
-
-2. **Design and Develop the Widget Component**: Create a React component that represents your widget. This component should be configurable and customizable, allowing clients to specify parameters such as colors, styles, content, etc.
-
-3. **Implement Configuration Options**: Add functionality to your widget component to accept configuration options as props. These options will allow clients to customize the appearance and behavior of the widget according to their preferences.
-
-4. **Export Widget Functionality**: Implement functionality to export the widget as a JavaScript file along with its associated CSS styles. This file should contain the necessary code to render the widget based on the provided configuration options.
-
-5. **Integrate Custom HTML Tag**: Define a custom HTML tag (e.g., `<custom-widget>`) that clients can use to embed the widget into their HTML landing pages. This tag should include a special ID attribute that the widget JavaScript code can target to render the widget.
-
-6. **Package Widget for Distribution**: Set up the necessary tooling and build processes to package the widget into a distributable format. This may involve bundling the JavaScript and CSS files, minifying code, and generating documentation.
-
-7. **Provide Documentation and Usage Examples**: Create documentation that explains how clients can configure, embed, and use the widget in their landing pages. Include usage examples and code snippets to make it easy for clients to integrate the widget into their projects.
-
 ## How to edit files each language the widget
 
 1. **Organize Language Files**: Create separate language files for each supported language in your project. These files can be JSON, JavaScript, or any other format that is convenient for storing language translations and text.

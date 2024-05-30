@@ -18,17 +18,19 @@ const CodeEditor_frontend = ({ file, language }: any) => {
 
     return (
         <div className='h-[85%] flex flex-row'>
+
             <div className='bg-gradient-to-r from-[#eae8e8] to-[#ffffff] min-w-[9.7px]'></div>
                 <MonacoEditor
                     height="100%"
                     defaultLanguage="Javascript"
+                    // defaultValue=" "
                     value={code}
                     theme="vs-white"
                     language={language}
                     options={{
-                        fontSize: 9.13,
+                        fontSize: 14,
                         fontFamily: 'Cascadia Mono',
-                        lineHeight: 10.61,
+                        lineHeight: 17,
                         padding: {
                             top: 28.76,
                             bottom: 20,
@@ -50,6 +52,7 @@ const CodeEditor_frontend = ({ file, language }: any) => {
                     onChange={(newValue) => setCode(newValue || "")}
                 />
             </div>
+        // </div>
     );
 };
 

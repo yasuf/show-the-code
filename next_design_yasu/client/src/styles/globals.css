@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -36,7 +37,7 @@ body {
 .quadrant-bg {
   width: 100%;
   height: auto;
-  background: 
+  background:
       radial-gradient(circle at top left, #0532A3, transparent 55%, #7E95D0, transparent 50%),
       radial-gradient(circle at top right, #685daf, transparent 55%, #D8D8D8, transparent 0%),
       radial-gradient(circle at bottom right, #0532A3, transparent 55%, #7E95D0, transparent 50%, #FFFFFF, transparent 0%),
@@ -102,10 +103,10 @@ body {
 }
 
 .sidebarText {
-  font-size: 9.13px;
+  font-size: 13px;
   line-height: 11.65px;
   font-weight: 700;
-  font-family: 'Space Grotesk';
+  font-family: 'Nunito Sans';
   color: #000000;
 }
 
@@ -124,14 +125,14 @@ body {
 }
 
 .sidebarTitle {
-  font-size: 9.13px;
+  font-size: 13px;
   font-weight: 700;
-  font-family: 'Space Grotesk';
+  font-family: 'Nunito Sans';
   line-height: 11.65px;
 }
 
 .editorButton, .accordionFont, .articleFont {
-  font-family: 'Space Grotesk';
+  font-family: 'Nunito Sans';
 }
 
 .sidebarPosition {
@@ -241,7 +242,7 @@ main {
   margin-right: 0;
 }
 
-/* Generated styles starts here */ 
+/* Generated styles starts here */
 
 .accordion {
     /* border-color: #dedede;
@@ -250,7 +251,7 @@ main {
     border-width: 1px; */
     flex-direction: column;
     height: auto;
-} 
+}
 
 .accordion-title,
 .accordion-select  {
@@ -269,21 +270,21 @@ main {
 .accordion-title:not(:nth-last-child(2))::after {
     border-bottom-color: rgb(234, 234, 234);
     border-right-color: transparent;
-} 
+}
 
  .accordion-select:hover + .accordion-title,
 .accordion-select:checked + .accordion-title {
     background-color: #ffffff;
-} 
+}
 
- .accordion-title span  {	
+ .accordion-title span  {
     transform: rotate(0deg);
     /* -ms-writing-mode: lr-tb; */
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
     padding-left: 33px;
     padding-right: 33px;
     line-height: 65px;
-} 
+}
 
  .accordion-content {
     background-color: #f7f7f7;
@@ -298,11 +299,11 @@ main {
 .buildbtnhover:hover {
   background-color: rgb(14 165 233);
   color: white;
-  font-family: 'Space Grotesk';;
+  font-family: 'Nunito Sans';;
 }
 
 .buildbtnhover, .Toptapfont {
-  font-family: 'Space Grotesk';;
+  font-family: 'Nunito Sans';;
 }
 
 /* .accordionBorder {

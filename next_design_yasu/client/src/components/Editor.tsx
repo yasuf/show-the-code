@@ -19,7 +19,7 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
     const [activeTab, setActiveTab] = useState<string>(tabs[0]);
     const [language, setLanguage] = useState<string>('javascript');
     const [file, setFile] = useState<string>('javascript.js');
-    
+
 
     const handleTabClick = (tab: string): void => {
         setActiveTab(tab);
@@ -31,26 +31,26 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                 <button
                     className={`px-4 py-2 w-[6.953rem] h-[1.569rem] font-Grotesk ${activeTab === "Front-end" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
                     onClick={() => handleTabClick("Front-end")}
-                >   
+                >
                     <Image src={icon1} alt={icon} width={13.69} height={13.69} className="mr-[14.26px] mb-[-10.5px]"  />
-                    Front-end                   
+                    Front-end
                 </button>
-                
+
                 <button
                     className={`px-4 py-2 w-[6.953rem] h-[1.569rem] font-Grotesk ${activeTab === "Back-end" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
                     onClick={() => handleTabClick("Back-end")}
-                >   
+                >
                     <Image src={icon2} alt={icon} width={13.69} height={13.69} className="mr-[14.26px]  mb-[-10.5px]"  />
                     Back-end
                 </button>
 
-                <button
+                {/* <button
                     className={`px-4 py-2 w-[6.953rem] h-[1.569rem] font-Grotesk ${activeTab === "Analytics" ? 'bg-zinc-50 editorButton text-[#2B2B2B] text-[6.85px] leading-[0.546rem] font-[700] rounded-t-[5.71px]' : 'bg-gray-400'}`}
                     onClick={() => handleTabClick("Analytics")}
-                >   
+                >
                     <Image src={icon3} alt={icon} width={13.69} height={13.69} className="mr-[14.26px]  mb-[-10.5px]"  />
                     Analytics
-                </button>
+                </button> */}
             </div>
 
             <div className="w-[35.451rem] h-[95%] bg-red-400 SidebarBG">
@@ -71,12 +71,12 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                         </div>
                     </div>
                 }
-                {activeTab === 'Back-end' && 
+                {activeTab === 'Back-end' &&
                     <div className="h-full flex">
                         <div className="sidebarPosition w-1/4">
                             <Sidebar_backend language={language} file={file} setFile={setFile} setLanguage= {setLanguage}/>
                         </div>
-                      
+
                         <div className="bg-slate-100 w-3/4 rounded-[5.71px] mt-[8.9px] ml-[11.48px] mb-[10px] mt-[8.9px] overflow-hidden ...">
                             <CodeEditor_backend key={language} file={file} language={language} value={code} onChange={setCode} />
                             <button className='buildbtnhover float-right text-[#000000] text-[9.13px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 mt-[15px] mx-5 border-solid border-2 border-sky-500'>
@@ -86,13 +86,13 @@ const CodeEditorWin: React.FC = ({icon}:any) => {
                     </div>
                 }
 
-                    
-                {activeTab === 'Analytics' && 
+
+                {activeTab === 'Analytics' &&
                     <div className="h-full flex">
                         <div className="sidebarPosition w-1/4">
                             <Sidebar_analytics language={language} file={file} setFile={setFile} setLanguage= {setLanguage}/>
                         </div>
-                    
+
                         <div className="bg-slate-100 w-3/4 rounded-[5.71px] mt-[8.9px] ml-[11.48px] mb-[10px] mt-[8.9px] overflow-hidden ...">
                             <CodeEditor_analytics key={language} file={file} language={language} value={code} onChange={setCode} />
                             <button className='buildbtnhover float-right text-[#000000] text-[9.13px] rounded-r-[20px] rounded-l-[10px] px-5 py-3 mt-[15px] mx-5 border-solid border-2 border-sky-500'>

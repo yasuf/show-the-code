@@ -22,6 +22,7 @@ const Acc: React.FC = () => {
   return (
     <Accordion
       selectedKeys={selectedKeys}
+      // @ts-expect-error
       onSelectionChange={setSelectedKeys}
       className="text-[#2B2B2B] accordionFont"
     >
